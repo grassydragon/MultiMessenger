@@ -1,0 +1,16 @@
+/* MAIN WINDOW CHATS CELLS */
+.list-cell {
+    -fx-background-color: #fcffff;
+    -fx-border-radius: 0px;
+    -fx-border-width: 0.1;
+    -fx-background-insets: 0, 0 0 0 0;
+    -fx-border-color: black;
+    -fx-text-fill: #4a4a4a;
+}
+
+.list-cell:hover {
+    -fx-border-color: #00a7de;
+    -fx-border-radius: 0px;
+    -fx-border-width: 0.6;
+    -fx-background-color: #ACE0EE;
+}

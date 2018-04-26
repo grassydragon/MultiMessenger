@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="TOP_CENTER" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.MainController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints vgrow="ALWAYS" />
+    </rowConstraints>
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.hgrow="ALWAYS">
+            <children>
+                <Button disable="true" mnemonicParsing="false" text="New" />
+                <Button mnemonicParsing="false" onAction="#onAccountsClick" text="Accounts" />
+                <Button disable="true" mnemonicParsing="false" onAction="#onSettingsClick" text="Settings" />
+                <Button disable="true" mnemonicParsing="false" onAction="#onHelpClick" text="Help" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" spacing="10.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+            <children>
+                <Label text="Search:" />
+                <TextField disable="true" promptText="Text to search" HBox.hgrow="ALWAYS" />
+                <Label text="Filter:" />
+                <ComboBox disable="true" value="All accounts">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="All accounts" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <ListView fx:id="listView" fixedCellSize="45.0" focusTraversable="false" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+    </children>
+</GridPane>
